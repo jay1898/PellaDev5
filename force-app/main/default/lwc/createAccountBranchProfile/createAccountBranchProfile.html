@@ -1,0 +1,34 @@
+<template>
+  
+  <lightning-input type="text" label="Search Branch" style="font-weight: bold; font-size: 1rem;"
+    value={searchKey}
+    onchange={handleSearchKeyChange}
+    placeholder="Enter branch name"
+    class="search-input"
+  ></lightning-input>
+  
+
+  <template if:true={hasResults}>
+    <div class="results-container">
+      <template if:true={isLoading}>
+        <lightning-spinner alternative-text="Loading" size="medium"></lightning-spinner>
+      </template>
+    <template for:each={branches} for:item="branch">
+      <div key={branch.Id} class="result-item">
+        <lightning-button
+          label={branch.Name}
+          data-id={branch.Id}
+          onclick={handleBranchSelect}
+        ></lightning-button>
+      </div>
+    </template>
+
+
+  </div>
+  </template>
+
+  <div class="button-group">
+    <lightning-button label="Save" variant="brand" onclick={handleSave} class="slds-m-right_small"></lightning-button>
+    <lightning-button label="Cancel" onclick={handleCancel} class="slds-m-right_small"></lightning-button>
+  </div></lightning-button>
+</template>

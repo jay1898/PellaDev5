@@ -1,0 +1,30 @@
+.search-input {
+    width: 300px;
+    padding: 0.5rem;
+    font-size: 0.875rem;
+  }
+  
+  .results-container {
+    margin-top: 0.5rem;
+    padding-left: 1rem;
+  }
+  
+  .result-item {
+    padding: 0.25rem 0;
+  }
+  
+  .button-group {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 1rem;
+    padding-bottom: 1rem;
+  }
+  
+  .save-button {
+    margin-right: 0.5rem;
+  }
+  
+  .cancel-button {
+    margin-left: 0.5rem;
+    margin-right: 1rem;
+  }
